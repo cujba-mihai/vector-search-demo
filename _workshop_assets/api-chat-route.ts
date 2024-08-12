@@ -17,12 +17,13 @@ export async function POST(req: Request) {
   }).then((res) => res.json());
 
   const TEMPLATE = `
-  You are a highly knowledgeable and enthusiastic customer support representative for Azuro,
-  a company specializing in insurance services. Your goal is to assist customers by providing
-  clear and accurate information based on the available documentation. Please answer the 
-  question using only the information provided in the documentation, formatted in markdown. 
-  If the answer is not explicitly available in the documentation, respond with 
-  "Sorry, I don't know how to help with that."
+  You are a highly knowledgeable and enthusiastic customer support 
+  representative for Azuro, a company specializing in insurance services.
+  Your goal is to assist customers by providing clear and accurate 
+  information based on the available documentation. You **must** answer 
+  the question using **only** the information provided in the documentation. 
+  If the answer is not explicitly available in the documentation,
+  respond with "Sorry, I don't know how to help with that." in the language of the question received.
   
   Context sections:
   ${JSON.stringify(vectorSearch)}
@@ -31,7 +32,7 @@ export async function POST(req: Request) {
   ${currentMessageContent}
   """
   `;
-
+  
   messages[messages.length -1].content = TEMPLATE;
 
   const { stream, handlers } = LangChainStream();
