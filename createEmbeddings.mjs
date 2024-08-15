@@ -18,8 +18,8 @@ for (const fileName of fileNames) {
   console.log(`Vectorizing ${fileName}`);
   
   const splitter = RecursiveCharacterTextSplitter.fromLanguage("markdown", {
-    chunkSize: 500,
-    chunkOverlap: 50,
+    chunkSize: 1000,
+    chunkOverlap: 100,
   });
   const output = await splitter.createDocuments([document]);
   
