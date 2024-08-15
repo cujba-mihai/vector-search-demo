@@ -1,8 +1,8 @@
 # RO
-Unde pot verifica valabilitatea RCA?
-Ce riscuri sunt acoperite de asigurari?
-Cum va pot contacta?
+Unde poate fi verificata valabilitatea Valabilitatea RCA și Carte Verde?
+Cum pot rezilia un contract?
+Care sunt avantajele asigurarii?
 
 # RU
 Что такое «Бонус–Малус»?
-Как я могу оплатить страховку ?
+Как я могу оплатить страховку?
